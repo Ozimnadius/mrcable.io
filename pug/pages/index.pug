@@ -1,10 +1,11 @@
 extends ../main
 
 block variables
-    - var title = 'Главная'
+    - var title = 'MrCable.ru'
 
 block content
     main.index
+        //- slider
         section.index__slider
             .islider
                 .container
@@ -47,7 +48,7 @@ block content
                                                             .iscontact__name Склад:
                                                         .iscontact__txt Москва, Мурманский проезд, д.1А, стр.1
                                         .islide__right
-                                            +image('/images/content/content/slider/img.png','islide__img')
+                                            +image('/images/content/slider/img.png','islide__img')
 
                     .islider__nav
                         a(href='#').islider__arr.islider__prev.
@@ -59,4 +60,139 @@ block content
                             <svg width="9" height="86" viewBox="0 0 9 86" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M4.01558 85.5651C4.21085 85.7604 4.52743 85.7604 4.72269 85.5651L7.90467 82.3831C8.09993 82.1879 8.09993 81.8713 7.90467 81.676C7.70941 81.4808 7.39282 81.4808 7.19756 81.676L4.36914 84.5045L1.54071 81.676C1.34545 81.4808 1.02886 81.4808 0.833601 81.676C0.638339 81.8713 0.638339 82.1879 0.833601 82.3831L4.01558 85.5651ZM3.86908 0.0935062L3.86914 85.2116L4.86914 85.2116L4.86908 0.0935056L3.86908 0.0935062Z" fill="#BDBDBD"/>
                             </svg>
+        //- partners
+        section.index__partners
+            .iparts
+                .container
+                    .iparts__left
+                        h2.iparts__title Мы официальные дистрибьюторы по России:
+                    .iparts__right
+                        each i in [1,2,3,4,5]
+                            .ipart
+                                .ipart__img
+                                    +image('/images/content/partners/'+i+'.png')
+        //- feed
+        section.index__feed
+            .container
+                .feed
+                    .feed__left
+                        .feed__icon.
+                            <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.9607 38.574L0.753906 53.7765L4.10619 57.1297L19.313 41.9272L15.9607 38.574Z" fill="#FFDD2D"/>
+                            <path d="M13.7893 53.778L17.1416 57.1312L28.7932 45.4829L25.4409 42.1297L13.7893 53.778Z" fill="#FFDD2D"/>
+                            <path d="M15.7551 32.4391L12.4023 29.0863L0.752444 40.7362L4.1052 44.089L15.7551 32.4391Z" fill="#FFDD2D"/>
+                            <path d="M57.6408 0.240479L52.7547 1.86921L52.7072 1.82061L52.6112 1.91662L1.11426 19.0823L27.2035 30.6778L38.799 56.7671L55.9647 5.26891L56.0595 5.17408L56.0121 5.12666L57.6408 0.240479ZM14.2105 19.7153L45.1148 9.41304L28.4743 26.0547L14.2105 19.7153ZM38.166 43.6708L31.8266 29.407L48.4671 12.7665L38.166 43.6708Z" fill="#FFDD2D"/>
+                            </svg>
+                        h2.feed__title
+                            | Оставьте заявку
+                            br
+                            | и мы свяжемся с вами
+                    .feed__right
+                        .feed__field
+                            input(type='text' name='name' placeholder='Имя').input
+                        .feed__field
+                            input(type='tel' name='tel' placeholder='Телефон').input
+                        .feed__field
+                            button(type='submit').btn.feed__btn
+                                span.btn__txt Отправить
+                                span.btn__icon.
+                                    <svg width="26" height="8" viewBox="0 0 26 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M24.9585 4.56803C25.1538 4.37277 25.1538 4.05619 24.9585 3.86092L21.7766 0.678944C21.5813 0.483681 21.2647 0.483681 21.0694 0.678944C20.8742 0.874206 20.8742 1.19079 21.0694 1.38605L23.8979 4.21448L21.0694 7.0429C20.8742 7.23817 20.8742 7.55475 21.0694 7.75001C21.2647 7.94527 21.5813 7.94527 21.7766 7.75001L24.9585 4.56803ZM0.569336 4.71448H24.605V3.71448H0.569336V4.71448Z" fill="#333333"/>
+                                    </svg>
+
+
+        //- about
+        section.index__about
+            .about
+                .container
+                    h2.about__title Мы занимаемся оптовыми поставками профессиональных кабелей и разъёмов
+                    .about__sub Лучших мировых производителей для аудио, видео, светового и коммуникационного оборудования
+                    .about__grid
+                        .about__left
+                            .sws
+                                a(href='#').sw.active
+                                    span.sw__txt Официальные дистрибьюторы
+                                    span.sw__icon.
+                                        <svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.45703 1.5802L8.82178 9.57117L1.45703 17.5989" stroke="#878787" stroke-width="2"/>
+                                        </svg>
+                                a(href='#').sw
+                                    span.sw__txt Крупнейший склад
+                                    span.sw__icon.
+                                        <svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.45703 1.5802L8.82178 9.57117L1.45703 17.5989" stroke="#878787" stroke-width="2"/>
+                                        </svg>
+                                a(href='#').sw
+                                    span.sw__txt Доставка по всему миру
+                                    span.sw__icon.
+                                        <svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.45703 1.5802L8.82178 9.57117L1.45703 17.5989" stroke="#878787" stroke-width="2"/>
+                                        </svg>
+
+
+                        .about__right
+                            .tabs
+                                .tab.active
+                                    .distributors
+                                        .distributors__left
+                                            h3.tab__title Официальные дистрибьюторы
+                                            .distributors__content
+                                                p Мы являемся официальными дистрибьюторами Neutrik, Belden, Draka, Canare, Schill, что гарантирует качество и лучшие цены.
+                                                p Все продукция закупается напрямую с заводов производителей Европы, Америки и Японии и имеет государственные таможенные декларации (ГТД).
+                                            a(href='#').distributors__link.btn
+                                                span.btn__txt Смотреть сертификаты
+                                                span.btn__icon.
+                                                    <svg width="23" height="8" viewBox="0 0 23 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M22.5713 4.3931C22.7666 4.19784 22.7666 3.88126 22.5713 3.686L19.3894 0.504017C19.1941 0.308755 18.8775 0.308755 18.6822 0.504017C18.487 0.699279 18.487 1.01586 18.6822 1.21112L21.5107 4.03955L18.6822 6.86798C18.487 7.06324 18.487 7.37982 18.6822 7.57508C18.8775 7.77035 19.1941 7.77035 19.3894 7.57508L22.5713 4.3931ZM0.355469 4.53955H22.2178V3.53955H0.355469V4.53955Z" fill="#333333"/>
+                                                    </svg>
+                                        .distributors__right
+                                            each i in [1,2,3,4,5,6]
+                                                .distributors__item
+                                                    .distributors__img
+                                                        +image('/images/content/partners/'+i+'.png')
+                                .tab
+                                    .store
+                                        h3.tab__title
+                                            | Крупнейший
+                                            br
+                                            | склад
+                                        .store__grid
+                                            .store__content
+                                                p
+                                                    b Наш склад самый крупный в России и СНГ&nbsp;
+                                                    |среди кабелей и разъёмов для аудио, видео, светового и коммуникационного оборудования.
+                                                p
+                                                    | Это &nbsp;
+                                                    b свыше 200 километров&nbsp;
+                                                    | основных позиций кабеля и 50 000 разъёмов.
+                                                p
+                                                    b Всегда в наличии кабельные катушки Schill,&nbsp;
+                                                    | подвесные механизмы и аксуссуары к ним.
+                                            .store__content
+                                                p Сценическая коммутация и патч панели - производства AT Cables, Neutrik, Canare.
+                                                p Сценическая коммутация и патч панели - производства AT Cables, Neutrik, Canare.
+                                .tab
+                                    .delivery
+                                        h3.tab__title.delivery__title
+                                            |Доставка
+                                            br
+                                            |по всему миру
+                                        .delivery__sub Всегда бесплатен самовывоз с нашего склада.
+                                        .delivery__grid
+                                            .delivery__content
+                                                p
+                                                    b Доставка по Москве
+                                                    br
+                                                    |осуществляется собственными курьерами или транспортной компанией Деловые линии и бесплатна &nbsp;
+                                                    b от 10 000 рублей;
+                                            .delivery__content
+                                                p
+                                                    b Доставка по России
+                                                    br
+                                                    | осуществляется транспортной компанией Деловые линии или компанией на ваш выбор и бесплатна до терминала в Москве;
+                                            .delivery__content
+                                                p
+                                                    b Доставка за пределы России
+                                                    br
+                                                    |осуществляется любыми возможными способами;
 

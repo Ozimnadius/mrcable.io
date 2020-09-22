@@ -1,6 +1,6 @@
 //variables
 //fonts
-$font: 'Gilroy', Arial, sans-serif;
+$font: 'Roboto', Arial, sans-serif;
 
 //colors
 $bg: #ffffff;
@@ -26,6 +26,10 @@ $font-size: 16px;
 //sections
 @import "sections/header";
 @import "sections/index";
+@import "sections/slider";
+@import "sections/partners";
+@import "sections/feed";
+@import "sections/about";
 @import "sections/footer";
 
 
