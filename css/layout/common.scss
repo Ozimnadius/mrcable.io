@@ -1,0 +1,23 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  height: 51px;
+  border-radius: 4px;
+  background-color: #ffdd2d;
+  @include tr;
+
+  &__icon{
+    margin-left: 10px;
+    @include tr;
+  }
+
+  &:hover{
+    background-color: $light-yellow;
+
+    .btn__icon{
+      transform: translateX(10px);
+    }
+  }
+}

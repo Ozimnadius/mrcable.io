@@ -1,0 +1,52 @@
+.header {
+  background-color: #f6f6f6;
+  border-bottom: 1px solid #dcdcdc;
+  padding-top: 25px;
+  padding-bottom: 15px;
+
+  .container{
+    display: grid;
+    grid-template-columns: 4.3fr 7.7fr;
+    grid-gap: 0 20px;
+  }
+
+  &__right{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.hcontact{
+  display: flex;
+  position: relative;
+
+  &__left{
+    margin-right: 15px;
+  }
+
+  &__right{
+
+  }
+
+  &__val{
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  &__link{
+    font-size: 14px;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+  }
+}
+
+.hcall{
+  display: flex;
+  align-items: center;
+  &__icon{
+    margin-right: 15px;
+  }
+
+}

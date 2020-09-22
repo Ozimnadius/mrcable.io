@@ -1,0 +1,36 @@
+//variables
+//fonts
+$font: 'Gilroy', Arial, sans-serif;
+
+//colors
+$bg: #ffffff;
+$text: #333333;
+$grey-lines: #cccccc;
+$blue-accident: #268be9;
+$orange: #fd8f10;
+$text-dark: #8ba3c3;
+$light-yellow: #ffc444;
+$darker-gradient: #031c33;
+$blue: #112e49;
+
+//another
+$font-size: 16px;
+
+//layout
+@import "layout/mixins";
+@import "layout/fonts";
+@import "layout/smart-grid";
+@import "layout/adjustment";
+@import "layout/common";
+
+//sections
+@import "sections/header";
+@import "sections/index";
+@import "sections/footer";
+
+
+.debug {
+  //@include debug(rgba(0,0,0,0.3), 1px solid red);
+  //z-index: 100;
+  //top: 0;
+}

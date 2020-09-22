@@ -1,0 +1,141 @@
+.index{
+
+}
+
+.islider{
+  background-color: #f6f6f6;
+  border-bottom: 1px solid #dcdcdc;
+
+  .container{
+    position: relative;
+  }
+
+  &__nav{
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    bottom: 0;
+    right: -10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__pag{
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .swiper-pagination-bullet{
+      width: 16px;
+      height: 16px;
+      border: 1px solid rgba($text,.5);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px 0;
+      @include tr;
+
+      &:before{
+        content: '';
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #ffdd2d;
+        opacity: 0;
+        @include tr;
+      }
+    }
+    .swiper-pagination-bullet-active{
+      width: 27px;
+      height: 27px;
+      border: 2px solid #ffdd2d;
+
+      &:before{
+        opacity: 1;
+        width: 13px;
+        height: 13px;
+      }
+    }
+  }
+
+  &__arr{
+    @include tr;
+    outline: none;
+    padding: 0 10px;
+  }
+}
+
+.islide{
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  grid-gap: 0 20px;
+  align-items: center;
+  box-sizing: border-box;
+
+  &__title{
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 1.31;
+    margin-bottom: 25px;
+  }
+
+  &__txt{
+    color: rgba($text,.8);
+    line-height: 1.72;
+    margin-bottom: 45px;
+  }
+
+  &__link{
+    margin-bottom: 100px;
+  }
+
+  &__right{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-top: 35px;
+  }
+
+
+  &__grid{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__col{
+    width: 240px;
+    border-right: 1px solid #e0e0e0;
+    padding-right: 35px;
+
+    &:last-child{
+      border-color: transparent;
+      padding-right: 0;
+      padding-left: 60px;
+    }
+  }
+
+}
+
+.iscontact{
+  &__top{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  &__icon{
+    margin-right: 15px;
+  }
+
+  &__name{
+    font-size: 18px;
+  }
+
+  &__txt{
+    font-weight: 300;
+  }
+}
