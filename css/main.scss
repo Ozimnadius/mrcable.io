@@ -12,6 +12,9 @@ $text-dark: #8ba3c3;
 $light-yellow: #ffc444;
 $darker-gradient: #031c33;
 $blue: #112e49;
+$grey6: #cccccc;
+$red: #eb5757;
+$y: #fd8f10;
 
 //another
 $font-size: 16px;
@@ -30,6 +33,15 @@ $font-size: 16px;
 @import "sections/partners";
 @import "sections/feed";
 @import "sections/about";
+@import "sections/advantages";
+@import "sections/categories";
+@import "sections/works";
+@import "sections/cables";
+@import "sections/brand";
+@import "sections/revs";
+@import "sections/consult";
+@import "sections/form";
+@import "sections/certs";
 @import "sections/footer";
 
 

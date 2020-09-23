@@ -1,0 +1,64 @@
+.advantages{
+  transform: translateY(-50%);
+  &__grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 0 20px;
+  }
+}
+
+.advantage{
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+  background-color: $bg;
+  padding: 50px 45px;
+  position: relative;
+
+  &__icon{
+    margin-bottom: 30px;
+  }
+
+  &__title{
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.29;
+    margin-bottom: 20px;
+  }
+
+  &__txt{
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+
+  &__link{
+
+
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    &:hover{
+      color: #ffdd2d;
+
+      svg{
+        fill: #ffdd2d;
+      }
+    }
+
+    &-txt{
+      margin-right: 15px;
+      @include tr;
+    }
+
+
+    svg{
+      fill: #333;
+      @include tr;
+    }
+  }
+}

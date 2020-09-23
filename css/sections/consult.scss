@@ -1,0 +1,39 @@
+.consult{
+  background-image: linear-gradient(273.73deg, #202021 0%, #181818 100%);
+  border-top: 12px solid #35363e;
+  border-bottom: 12px solid #35363e;
+  padding-top: 45px;
+  padding-bottom: 60px;
+  text-align: center;
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title{
+    color: $bg;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  &__sub{
+    color: $bg;
+    margin-bottom: 25px;
+    max-width: 567px;
+  }
+
+  &__btn{
+    width: 267px;
+    height: 55px;
+    border-radius: 4px;
+    background-color: #ffdd2d;
+
+    .btn__txt{
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+}

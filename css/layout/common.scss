@@ -39,4 +39,37 @@
   font-family: Roboto;
   font-size: 16px;
   font-weight: 400;
+
+  &.error{
+    border-color: $red;
+  }
 }
+
+.title{
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 1.2;
+  padding-bottom: 45px;
+  position: relative;
+
+  &:before{
+    content: '';
+    display: block;
+    width: 281px;
+    height: 6px;
+    background-color: #ffe147;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.sub{
+  font-size: 24px;
+}
+
+.disabled {
+  opacity: .5;
+  pointer-events: none;
+}
+

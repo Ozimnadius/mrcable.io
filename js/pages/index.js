@@ -15,6 +15,30 @@ $(function () {
         },
     });
 
+    var revsSwiper = new Swiper('.revs__container', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        initialSlide: 1,
+        // Navigation arrows
+        navigation: {
+            nextEl: '.revs__next',
+            prevEl: '.revs__prev',
+        },
+        pagination: {
+            el: '.revs__pag',
+        },
+
+
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 160,
+            depth: 150,
+            modifier: 3,
+            slideShadows : false,
+        },
+    });
 
     $('.sw').on('click', function (e) {
         e.preventDefault();

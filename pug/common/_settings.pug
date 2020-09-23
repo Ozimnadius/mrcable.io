@@ -1,1 +1,121 @@
-- var menu = { '1': 'Page1', '2': 'Page2', '3': 'Page3'};
+-
+    var cats = [
+        'Разъёмы и комплектующие',
+        'Кабель в бухтах',
+        'Готовые решения',
+        'Кабельные катушки',
+        'Мультикоры на основе кабеля и короба',
+        'Терминационные и патч-панели',
+    ];
+
+-
+    var works = [
+        {
+            svg: '<svg width="59" height="55" viewBox="0 0 59 55" fill="none" xmlns="http://www.w3.org/2000/svg">\n'+
+            '<path d="M29.4912 6.36914H43.5912C44.1912 10.3691 47.4912 12.9692 51.4912 13.5692C51.4912 21.0692 51.4912 29.7692 51.4912 33.7692C51.4912 44.5692 32.2912 53.8691 29.4912 53.8691C26.6912 53.8691 7.49121 44.5692 7.49121 33.7692C7.49121 29.8692 7.49121 21.1692 7.49121 13.5692C11.4912 12.9692 14.7912 10.3691 15.3912 6.36914H29.4912Z" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M57.4915 24.3691V33.6692C57.4915 40.4692 53.0914 46.9691 44.6914 52.8691" stroke="#BCC0C4" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M36.4912 1.36914H44.4912" stroke="#BCC0C4" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M14.4912 1.36914H22.4912" stroke="#BCC0C4" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M14.2911 52.9692C5.89114 47.0692 1.49121 40.5692 1.49121 33.7692V24.4692" stroke="#BCC0C4" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M43.1912 28.7689C43.1912 36.8689 36.6912 43.3689 28.5912 43.3689C20.4912 43.3689 13.9912 36.8689 13.9912 28.7689C13.9912 20.6689 20.4912 14.1689 28.5912 14.1689C30.3912 14.1689 32.1911 14.4689 33.7911 15.1689" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M42.6914 14.269L29.4915 27.4691L23.9915 21.9691L19.6914 26.369L29.4915 36.269L47.0914 18.6691L42.6914 14.269Z" stroke="#555555" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M57.4912 12.3691V14.3691" stroke="#BCC0C4" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M57.4912 16.3691V18.3691" stroke="#BCC0C4" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M57.4912 20.3691V22.3691" stroke="#BCC0C4" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M1.49121 12.3691V14.3691" stroke="#BCC0C4" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M1.49121 16.3691V18.3691" stroke="#BCC0C4" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M1.49121 20.3691V22.3691" stroke="#BCC0C4" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M28.4912 1.36914H30.4912" stroke="#BCC0C4" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M24.4912 1.36914H26.4912" stroke="#BCC0C4" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M32.4912 1.36914H34.4912" stroke="#BCC0C4" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '</svg>\n',
+            title: 'Защита цен',
+            txt: 'Вы можете быть уверены, что за вами будут зафиксирована необходимая продукция на заводе производителя с серьёзными скидками'
+        },
+        {
+            svg: '<svg width="65" height="53" viewBox="0 0 65 53" fill="none" xmlns="http://www.w3.org/2000/svg">\n'+
+            '<path d="M26.4912 0.619141V6.61914" stroke="#BCC0C4" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M23.4912 3.61914H29.4912" stroke="#BCC0C4" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M5.49121 12.6191V18.6191" stroke="#BCC0C4" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M2.49121 15.6191H8.49121" stroke="#BCC0C4" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M56.4912 17.6191V23.6191" stroke="#BCC0C4" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M53.4912 20.6191H59.4912" stroke="#BCC0C4" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M55.4912 51.6191H60.4912" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M62.4912 51.6191H64.4912" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M0.491211 51.6191H2.49121" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M50.4912 25.6191H39.4912V51.6191H50.4912V25.6191Z" fill="#E9EAEB" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M20.4912 42.6191H9.49121V51.6191H20.4912V42.6191Z" fill="#E9EAEB" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M35.4912 36.6191H24.4912V51.6191H35.4912V36.6191Z" fill="#E9EAEB" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M53.4912 51.6191H4.49121" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M51.4908 1.61914H40.0908L42.8909 4.51917L28.0908 19.2192L20.3909 11.5192L4.09082 27.7192L9.6908 33.4192L19.5908 23.5192L27.3909 31.3192L48.5908 10.1191L51.4908 13.1191V1.61914Z" fill="#EBEBEB" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '</svg>\n',
+            title: 'Наилучшие решения',
+            txt: 'Наши специалисты подберут решения с идельным соотношением цены и качества'
+        },
+        {
+            svg: '<svg width="64" height="63" viewBox="0 0 64 63" fill="none" xmlns="http://www.w3.org/2000/svg">\n'+
+            '<path d="M48.5983 40.4067L34.6982 26.4067H23.6982L15.6982 18.4067L4.69824 29.4067L9.69824 34.4067C10.0982 35.9067 11.4982 37.5067 12.3982 38.1067L25.8982 51.8067L27.5983 53.5067C30.1983 56.1067 32.5982 54.2067 33.7982 52.0067C36.1982 53.2067 38.7982 51.9067 39.7982 50.0067C42.7982 51.5067 45.3982 48.4067 45.1982 46.8067C48.3982 46.8067 50.7983 43.4067 48.5983 40.4067Z" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M46.5981 19.4067C46.5981 19.4067 42.4981 23.3067 41.5981 23.4067C40.3981 23.6067 34.998 21.0067 33.898 20.8067C32.798 20.5067 21.8981 24.0067 21.0981 25.3067C20.2981 26.6067 23.4981 29.7067 26.5981 29.3067C29.6981 28.9067 34.2981 27.3067 35.6981 28.6067C37.8981 30.8067 44.1981 37.5067 47.1981 40.1067C49.6981 42.3067 53.9981 34.7067 55.0981 33.5067C55.0981 33.5067 57.0981 32.1067 58.4981 31.0067L46.5981 19.4067Z" fill="#F5F5F6" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M33.7986 52.1067L29.0986 47.4067" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M39.6985 50.1066L32.8984 43.3066" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M45.0983 47.0068L37.1982 39.0068" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M47.6288 15.4029L42.6084 20.4233L56.609 34.4239L61.6294 29.4035L47.6288 15.4029Z" fill="#EBEBEB" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M47.5986 20.4067L49.5986 22.4067" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M15.609 15.4735L1.6084 29.4741L6.62881 34.4945L20.6294 20.4939L15.609 15.4735Z" fill="#EBEBEB" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M15.5986 20.4072L13.5986 22.4072" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M24.5985 61.8066C12.3985 59.0066 3.69844 49.3066 1.39844 37.8066" stroke="#BCC0C4" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M38.2988 61.8067C49.2988 59.2067 58.4989 50.7067 61.1989 38.9067" stroke="#BCC0C4" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M53.7986 11.1068C49.7986 6.80676 44.4986 3.60676 38.2986 2.20676C27.2986 -0.293239 16.2986 3.40676 9.09863 11.1068" stroke="#BCC0C4" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M20.198 52.2065C20.998 53.0065 22.1981 53.0065 22.9981 52.2065L25.098 50.1065C25.898 49.3065 25.698 47.9065 24.698 46.9065C23.698 45.9065 22.3981 45.7065 21.4981 46.5065C22.2981 45.7065 22.098 44.3065 21.098 43.3065C20.098 42.3065 18.798 42.1065 17.898 42.9065C18.698 42.1065 18.4981 40.7065 17.4981 39.7065C16.4981 38.7065 15.198 38.5065 14.298 39.3065C15.098 38.5065 14.898 37.1065 13.898 36.1065C12.898 35.1065 11.598 34.9065 10.698 35.7065L8.59805 37.8065C7.79805 38.6065 7.79805 39.8065 8.59805 40.6065L20.198 52.2065Z" fill="#F5F5F6" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M25.5986 16.4067L23.5986 14.4067" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M29.5986 14.4067L28.5986 11.4067" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M33.5986 14.4067L34.5986 11.4067" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M37.5986 16.4067L39.5986 14.4067" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '</svg>\n',
+            title: 'Рассрочка платежа',
+            txt: 'Предоставляем возможность рассрочки платежа под крупные проекты'
+        },
+        {
+            svg: '<svg width="60" height="56" viewBox="0 0 60 56" fill="none" xmlns="http://www.w3.org/2000/svg">\n'+
+            '<path d="M25.5352 54.6191L49.5352 42.1191V15.8192L25.5352 3.61914L1.53516 15.8192V42.1191L25.5352 54.6191Z" fill="#F5F5F6"/>\n'+
+            '<path d="M1.53516 15.8193L25.5352 28.3193V54.6193L1.53516 42.1193V15.8193Z" fill="#E9EAEB"/>\n'+
+            '<path d="M47.5352 5.61914V0.619141" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M51.1348 6.31915L53.5348 2.11914" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M53.835 9.01917L57.9351 6.61914" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M54.5352 12.6191H59.5352" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M43.8354 6.31915L41.4355 2.11914" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M25.5352 54.6191L49.5352 42.1191V15.8192L25.5352 3.61914L1.53516 15.8192V42.1191L25.5352 54.6191Z" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M1.53516 15.8193L25.5352 28.3193L49.6351 15.8193" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M25.5352 28.6191V54.6191" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M33.9352 7.81934L10.5352 20.6193V25.6193L11.6351 25.7194L13.3351 27.6193L15.1351 28.0193L16.5352 29.4194V23.6193L40.2351 11.0193L33.9352 7.81934Z" fill="#E9EAEB" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M44.6351 38.2192L32.5352 44.6192" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M42.5352 25.6191V35.6191" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M40.0352 30.019L42.5352 26.019L45.0352 27.619" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M34.5352 29.6191V39.6191" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '<path d="M32.0352 34.019L34.5352 30.019L37.0352 31.619" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>\n'+
+            '</svg>\n',
+            title: 'Доставка точно в срок',
+            txt: 'Наша система логистики позволяет доставить продукцию в сжатые сроки и точно в срок'
+        },
+
+    ];
+
+-
+    var cables = [
+        {
+            title: 'Оперативное производство',
+            sub: '11 000 соединительных кабелей в месяц, 500 - в день'
+        },
+        {
+            title: 'Соединительные кабели',
+            sub: 'любой длины, сложности и из любых комплектующих'
+        },
+        {
+            title: 'Контроль качества',
+            sub: 'прозваниваем каждое соединение на обрывы'
+        },
+        {
+            title: 'Только оригинальные',
+            sub: 'и качественные комплектующие лучших производителей'
+        }
+    ];

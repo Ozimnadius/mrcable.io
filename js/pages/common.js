@@ -32,3 +32,79 @@ function imageResize(src) {
 // imageResize('https://loremflickr.com/320/440');
 
 const wWidth = $(window).width();
+
+function getSuccess() {
+    let template = $(tmpl.content),
+        loader = template.find('.success').clone();
+    return loader;
+}
+
+$.validator.methods.tel = function (value, element) {
+    return validateTel(value);
+};
+
+function validateTel(value) {
+    let re = new RegExp(/\d/g),
+        str = value.match(re);
+
+    if (str.length == 11) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+$('input[type=tel]').mask('+7 (999) 999-99-99');
+
+const popup = $('.popup'),
+    popupWrap = popup.find('.popup__wrapper');
+
+function getForm(cls) {
+    let template = $(tmpl.content),
+        form = template.find(cls).clone();
+    return form;
+}
+
+function openForm(form) {
+    popupWrap.html(form);
+    popup.addClass('active');
+    $('body').addClass('ovh');
+}
+
+function closePopup() {
+    popup.removeClass('active');
+    $('body').removeClass('ovh');
+}
+
+function validateForm(form,rules) {
+    form.validate({
+        rules: rules,
+        invalidHandler: function(event, validator) {
+            $(this).find('.form__error').addClass('active');
+        },
+        submitHandler: function (form) {
+            let data = $(form).serialize(),
+                url = $(form).attr('action');
+
+            $(form).find('.form__error').removeClass('active');
+
+            $.ajax({
+                dataType: "json",
+                type: "POST",
+                url: url,
+                data: data,
+                success: function (result) {
+                    if (result.status) {
+                        $(form).append(getSuccess());
+                    } else {
+                        alert('Что-то пошло не так, попробуйте еще раз!!!');
+                    }
+                },
+                error: function (result) {
+                    alert('Что-то пошло не так, попробуйте еще раз!!!');
+                }
+            });
+        },
+    });
+    $('input[type=tel]').mask('+7 (999) 999-99-99');
+}

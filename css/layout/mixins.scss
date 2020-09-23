@@ -76,3 +76,8 @@ $vh: 1080;
 @mixin tr(){
   transition: .3s;
 }
+
+@mixin demi(){
+  font-family: "Roboto";
+  font-weight: 500;
+}

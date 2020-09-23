@@ -4,10 +4,33 @@ header('Content-Type: application/json');
 $data = $_POST;
 $action = $data['action'];
 switch ($action) {
-    case 'callorderSubmit':
+    case 'ifeed':
         echo json_encode(array(
-            'status' => true,
-            'html' => '<div class="callorder__success">Спасибо мы скоро с Вами свяжемся.</div>'
+            'status' => true
+        ));
+        exit();
+        break;
+    case 'callback':
+        echo json_encode(array(
+            'status' => true
+        ));
+        exit();
+        break;
+    case 'question':
+        echo json_encode(array(
+            'status' => true
+        ));
+        exit();
+        break;
+    case 'price':
+        echo json_encode(array(
+            'status' => true
+        ));
+        exit();
+        break;
+    case 'solution':
+        echo json_encode(array(
+            'status' => true
         ));
         exit();
         break;
@@ -18,3 +41,4 @@ switch ($action) {
         exit();
         break;
 }
+

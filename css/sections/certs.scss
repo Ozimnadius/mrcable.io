@@ -1,0 +1,55 @@
+.certs{
+  max-width: 792px;
+  width: 792px;
+  border-radius: 20px;
+  background-color: #f5f5f6;
+  padding: 65px 70px;
+  position: relative;
+
+  &__title{
+    font-size: 38px;
+    font-weight: 500;
+    margin-bottom: 45px;
+    text-align: center;
+  }
+
+  &__grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 0 30px;
+  }
+}
+
+.cert{
+  display: block;
+  text-align: center;
+
+  &__name{
+    color: #000000;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 25px;
+    display: block;
+  }
+
+  &__img{
+    display: block;
+    width: 100%;
+    position: relative;
+    &:before{
+      content: '';
+      display: block;
+      padding-top: calc(193/137*100%);
+    }
+
+    img{
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
