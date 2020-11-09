@@ -216,12 +216,12 @@ block content
                                             .distributors__content
                                                 p Мы являемся официальными дистрибьюторами Neutrik, Belden, Draka, Canare, Schill, что гарантирует качество и лучшие цены.
                                                 p Все продукция закупается напрямую с заводов производителей Европы, Америки и Японии и имеет государственные таможенные декларации (ГТД).
-                                            a(href='#').distributors__link.btn.jsCerts
-                                                span.btn__txt Смотреть сертификаты
-                                                span.btn__icon.
-                                                    <svg width="23" height="8" viewBox="0 0 23 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M22.5713 4.3931C22.7666 4.19784 22.7666 3.88126 22.5713 3.686L19.3894 0.504017C19.1941 0.308755 18.8775 0.308755 18.6822 0.504017C18.487 0.699279 18.487 1.01586 18.6822 1.21112L21.5107 4.03955L18.6822 6.86798C18.487 7.06324 18.487 7.37982 18.6822 7.57508C18.8775 7.77035 19.1941 7.77035 19.3894 7.57508L22.5713 4.3931ZM0.355469 4.53955H22.2178V3.53955H0.355469V4.53955Z" fill="#333333"/>
-                                                    </svg>
+                                            //a(href='#').distributors__link.btn.jsCerts
+                                            //    span.btn__txt Смотреть сертификаты
+                                            //    span.btn__icon.
+                                            //        <svg width="23" height="8" viewBox="0 0 23 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            //        <path d="M22.5713 4.3931C22.7666 4.19784 22.7666 3.88126 22.5713 3.686L19.3894 0.504017C19.1941 0.308755 18.8775 0.308755 18.6822 0.504017C18.487 0.699279 18.487 1.01586 18.6822 1.21112L21.5107 4.03955L18.6822 6.86798C18.487 7.06324 18.487 7.37982 18.6822 7.57508C18.8775 7.77035 19.1941 7.77035 19.3894 7.57508L22.5713 4.3931ZM0.355469 4.53955H22.2178V3.53955H0.355469V4.53955Z" fill="#333333"/>
+                                            //        </svg>
                                         .distributors__right
                                             each i in [1,2,3,4,5,6]
                                                 .distributors__item
@@ -246,7 +246,7 @@ block content
                                                     b Всегда в наличии кабельные катушки Schill,&nbsp;
                                                     | подвесные механизмы и аксуссуары к ним.
                                             .store__content
-                                                p Сценическая коммутация и патч панели - производства AT Cables, Neutrik, Canare.
+                                                p Сценическая коммутация и патч панели - производства Neutrik, Canare.
                                                 p Регулярные поставки с заводов производителей позволяют поддерживать самые ходовые позиции в наличии.
                                 .tab
                                     .delivery
@@ -414,26 +414,25 @@ block content
 
                         .revs__container.swiper-container
                             .swiper-wrapper
-                                 each i in [1,2,3,4,5]
+                                 each i in revs
                                     .swiper-slide.revs__slide
                                         .rev
                                             .rev__left
                                                 .rev__top
                                                     .rev__face
-                                                        +image('images/content/revs/img.jpg')
+                                                        +image(i.img)
                                                     .rev__desc
-                                                        .rev__name Максим Уметбаев
-                                                        .rev__prof Главный инженер проекта ЗАО "Полимедиа
-                                                .rev__txt «Компания MrCable давно стала нашим надёжным партнёром. Нам нравится, что у них на складе всегда в наличии широкий ассортимент разъёмов Neutrik. Регулярно заказываем соединительные кабели MrCable — довольны качеством. Заказы доставляются быстро»
-
+                                                        .rev__name= i.name
+                                                        .rev__prof= i.prof
+                                                .rev__txt!=i.desc
                                             .rev__right
                                                 .rev__comp Компания
-                                                .rev__compname ЗАО "Полимедиа
+                                                .rev__compname= i.comp
                                                 .rev__img
-                                                    +image('images/content/revs/logo.png')
+                                                    +image(i.logo)
                                                 .rev__site
                                                     .rev__site-title Веб-сайт
-                                                    a(href='/').rev__site-link allcables.ru
+                                                    a(href=i.site).rev__site-link= i.site
                         .revs__pag
         //- consult
         section.index__consult

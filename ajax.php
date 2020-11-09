@@ -101,7 +101,7 @@ function sendEmail()
     try {
         //Recipients
         $mail->setFrom('info@mrcable.ru', 'Mailer');
-        $mail->addAddress('info@web-comp.ru');              // Name is optional
+        $mail->addAddress('m.batyrov@mrcable.ru');              // Name is optional
 
         // Content
         $mail->isHTML(true);                                  // Set email format to HTML
