@@ -3,6 +3,7 @@ $(function () {
 
     let sliderSwiper = new Swiper('.islider__container', {
         loop: true,
+        spaceBetween: 10,
         // If we need pagination
         pagination: {
             el: '.islider__pag',
