@@ -197,6 +197,7 @@ html(lang="ru")
                 button(type='submit').form__submit.btn
                     span.btn__txt Отправить
                 input(type='hidden' name='action' value='callback')
+                input(type='hidden' name='theme' value='Обратный звонок')
 
             form(action='ajax.php' method='POST').popup__form.question.form
                 a(href='#').form__close.jsFormClose.
@@ -225,6 +226,7 @@ html(lang="ru")
                 button(type='submit').form__submit.btn
                     span.btn__txt Отправить
                 input(type='hidden' name='action' value='question')
+                input(type='hidden' name='theme' value='Вопрос менеджеру')
 
             form(action='ajax.php' method='POST').popup__form.price.form
                 a(href='#').form__close.jsFormClose.
@@ -253,6 +255,7 @@ html(lang="ru")
                 button(type='submit').form__submit.btn
                     span.btn__txt Отправить
                 input(type='hidden' name='action' value='price')
+                input(type='hidden' name='theme' value='Получить прайс-лист')
 
             form(action='ajax.php' method='POST').popup__form.solution.form
                 a(href='#').form__close.jsFormClose.
@@ -281,6 +284,8 @@ html(lang="ru")
                 button(type='submit').form__submit.btn
                     span.btn__txt Отправить
                 input(type='hidden' name='action' value='solution')
+                input(type='hidden' name='theme' value='Заказать решение')
+
 
             .certs
                 a(href='#').form__close.jsFormClose
