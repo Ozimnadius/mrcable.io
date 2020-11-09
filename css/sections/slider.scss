@@ -100,8 +100,9 @@
   &__right {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    //align-items: flex-end;
     padding-top: 35px;
+    height: 656px;
   }
 
 
@@ -123,7 +124,7 @@
   }
 
   &__img {
-    display: block;
+    //display: block;
   }
 }
 
